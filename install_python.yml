@@ -1,0 +1,9 @@
+---
+- hosts: training
+  become: yes
+  tasks:
+  - name: Install PIP
+    apt:  pkg=python-pip state=latest
+  - name: 
+    pip:
+      name: python-dotenv,pymongo

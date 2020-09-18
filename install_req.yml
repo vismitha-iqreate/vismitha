@@ -1,0 +1,16 @@
+---
+- hosts: training
+  become: yes
+  tasks:    
+    - name: Download Python 3.7
+      shell: cd /usr/src
+      shell: wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
+
+    - name: extract the downloaded package.
+      shell: tar xzf Python-3.7.4.tgz
+
+    - name: Compile Python Source
+      shell: cd Python-3.7.4
+     
+    - name: upgrading tensorflow
+      shell: pip install --upgrade tensorflow

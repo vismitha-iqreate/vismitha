@@ -1,0 +1,7 @@
+---
+- hosts: training
+  become: yes
+  tasks:
+    - name: Install python
+      apt: pkg=python state=latest
+      
